@@ -22,6 +22,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Wrap(
+        direction: Axis.vertical,
         children: [
           Container(width: 200, height: 200, color: Colors.amber),
 
