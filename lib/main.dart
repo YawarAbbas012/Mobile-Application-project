@@ -31,8 +31,9 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: GridView.count(
-        crossAxisSpacing: 6,
+      body: GridView.extent(
+        maxCrossAxisExtent: 100,
+        crossAxisSpacing: 5,
         mainAxisSpacing: 5,
         children: [
           Container(color: colorlist[0]),
@@ -44,8 +45,22 @@ class HomeScreen extends StatelessWidget {
           Container(color: colorlist[6]),
           Container(color: colorlist[7]),
         ],
-        crossAxisCount: 3,
       ),
+      //  GridView.count(
+      //   crossAxisSpacing: 6,
+      //   mainAxisSpacing: 5,
+      //   children: [
+      //     Container(color: colorlist[0]),
+      //     Container(color: colorlist[1]),
+      //     Container(color: colorlist[2]),
+      //     Container(color: colorlist[3]),
+      //     Container(color: colorlist[4]),
+      //     Container(color: colorlist[5]),
+      //     Container(color: colorlist[6]),
+      //     Container(color: colorlist[7]),
+      //   ],
+      //   crossAxisCount: 3,
+      // ),
     );
   }
 }
