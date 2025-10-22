@@ -21,32 +21,22 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Row(
-        children: [
-          //Rich text
-          RichText(
-            text: TextSpan(
-              style: TextStyle(color: Colors.blue),
-              children: [
-                TextSpan(text: 'Hlo '),
-                TextSpan(
-                  text: 'World!',
-                  style: TextStyle(color: Colors.red, fontSize: 34),
-                ),
-
-                TextSpan(
-                  text: ' Flutter Development',
-                  style: TextStyle(
-                    color: Colors.amber,
-                    fontSize: 23,
-                    fontWeight: FontWeight.bold,
-                    fontStyle: FontStyle.italic,
+      body: Center(
+        child: Column(
+          children: [
+            RichText(
+              text: TextSpan(
+                children: [
+                  TextSpan(text: 'hlo ', style: TextStyle(color: Colors.amber)),
+                  TextSpan(
+                    text: 'Kia hal ha',
+                    style: TextStyle(color: Colors.red, fontSize: 34),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
