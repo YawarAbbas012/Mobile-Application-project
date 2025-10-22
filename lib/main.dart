@@ -16,37 +16,14 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
+// all widget height and width fix 
 class HomeScreen extends StatelessWidget {
-  var colorlist = [
-    Colors.red,
-    Colors.amber,
-    Colors.black,
-    Colors.blue,
-    Colors.green,
-    Colors.grey,
-    Colors.limeAccent,
-    Colors.cyanAccent,
-  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: GridView.builder(
-        itemBuilder: (context, index) {
-          return Container(color: colorlist[index]);
-        },
-        itemCount: colorlist.length,
-
-        // gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        //   crossAxisCount: 5,
-        //   crossAxisSpacing: 5,
-        //   mainAxisSpacing: 5,
-        // ),
-        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-          maxCrossAxisExtent: 400,
-          mainAxisSpacing: 5,
-          crossAxisSpacing: 5,
-        ),
+      body: ConstrainedBox(
+        constraints: BoxConstraints(minHeight: 100, minWidth: 100),
+        child: Container(width: 12, height: 12, color: Colors.red),
       ),
     );
   }
