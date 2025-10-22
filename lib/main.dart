@@ -18,25 +18,33 @@ class MyApp extends StatelessWidget {
 }
 
 class HomeScreen extends StatelessWidget {
+  var colorlist = [
+    Colors.red,
+    Colors.amber,
+    Colors.black,
+    Colors.blue,
+    Colors.green,
+    Colors.grey,
+    Colors.limeAccent,
+    Colors.cyanAccent,
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          children: [
-            RichText(
-              text: TextSpan(
-                children: [
-                  TextSpan(text: 'hlo ', style: TextStyle(color: Colors.amber)),
-                  TextSpan(
-                    text: 'Kia hal ha',
-                    style: TextStyle(color: Colors.red, fontSize: 34),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
+      body: GridView.count(
+        crossAxisSpacing: 6,
+        mainAxisSpacing: 5,
+        children: [
+          Container(color: colorlist[0]),
+          Container(color: colorlist[1]),
+          Container(color: colorlist[2]),
+          Container(color: colorlist[3]),
+          Container(color: colorlist[4]),
+          Container(color: colorlist[5]),
+          Container(color: colorlist[6]),
+          Container(color: colorlist[7]),
+        ],
+        crossAxisCount: 3,
       ),
     );
   }
